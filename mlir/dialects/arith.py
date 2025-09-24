@@ -90,7 +90,8 @@ class CmpfOperation(DialectOp):
 class ConstantOperation(DialectOp):
     value: Literal
     type: mast.Type
-    _syntax_ = 'arith.constant {value.constant_literal} : {type.type}'
+    _syntax_ = ['arith.constant {value.constant_literal} : {type.type}', 'arith.constant {value.constant_literal}']
+
 
 
 @dataclass

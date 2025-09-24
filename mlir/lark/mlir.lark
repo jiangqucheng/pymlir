@@ -23,7 +23,7 @@ negated_integer_literal : "-" integer_literal
 ?posneg_integer_literal : integer_literal | negated_integer_literal
 float_literal : /[-+]?[0-9]+[.][0-9]*([eE][-+]?[0-9]+)?/
 string_literal  : ESCAPED_STRING
-constant_literal : bool_literal | integer_literal | float_literal | string_literal
+constant_literal : bool_literal | posneg_integer_literal | float_literal | string_literal
 
 // Identifier syntax
 bare_id : (letter| underscore) (letter|digit|underscore|id_chars)*
